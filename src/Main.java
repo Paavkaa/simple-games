@@ -5,8 +5,8 @@ public class Main {
         Scanner in = new Scanner(System.in);
 
         System.out.println("Select game" +
-                "\n1. rock paper scissors" +
-                "\n2. none" +
+                "\n1. Rock paper scissors" +
+                "\n2. Number guessing" +
                 "\n3. none" +
                 "\nSelect:");
         int opt = in.nextInt();
@@ -15,6 +15,10 @@ public class Main {
             case 1:
                 RockPaperScissors game = new RockPaperScissors(RockPaperScissors.selectMode());
                 game.play();
+                break;
+            case 2:
+                int rounds = NumberGuesser.numOfRounds();
+                NumberGuesser guesser = new NumberGuesser(rounds);
                 break;
 
             default:
