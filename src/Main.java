@@ -17,10 +17,9 @@ public class Main {
                 game.play();
                 break;
             case 2:
-                NumberGuesser guesser = new NumberGuesser(0, 0, new int[0]);
-                guesser.guessingRange();
-                guesser.generateUnknown();
-                System.out.println(guesser.unknownNum);
+                int rounds = NumberGuesser.numOfRounds();
+                NumberGuesser guesser = new NumberGuesser(rounds);
+                guesser.guess();
                 break;
             default:
                 System.out.println("Wrong value");
