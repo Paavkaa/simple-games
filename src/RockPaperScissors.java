@@ -96,9 +96,6 @@ public class RockPaperScissors {
         }
     }
 
-
-
-    // method to determine the winner
     private enum GameResult {
         WIN,
         LOSS,
