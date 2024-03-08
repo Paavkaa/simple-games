@@ -19,6 +19,7 @@ public class Main {
             case 2:
                 int rounds = NumberGuesser.numOfRounds();
                 NumberGuesser guesser = new NumberGuesser(rounds);
+                guesser.guess();
                 break;
 
             default:

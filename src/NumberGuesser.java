@@ -5,43 +5,10 @@ public class NumberGuesser {
     private int minNum;
     private int maxNum;
     public int rounds;
-    private int unknownNum;
-    private TreeSet<Integer> guessedNum;
+    private TreeSet<Integer> guessedNum = new TreeSet<>();
 
     public NumberGuesser(int rounds) {
         this.rounds = rounds;
-    }
-
-    public int getMinNum() {
-        return minNum;
-    }
-
-    public void setMinNum(int minNum) {
-        this.minNum = minNum;
-    }
-
-    public int getMaxNum() {
-        return maxNum;
-    }
-
-    public void setMaxNum(int maxNum) {
-        this.maxNum = maxNum;
-    }
-
-    public int getUnknownNum() {
-        return unknownNum;
-    }
-
-    public void setUnknownNum(int unknownNum) {
-        this.unknownNum = unknownNum;
-    }
-
-    public TreeSet<Integer> getGuessedNum() {
-        return guessedNum;
-    }
-
-    public void setGuessedNum(TreeSet<Integer> guessedNum) {
-        this.guessedNum = guessedNum;
     }
 
     public void guessingRange() {
@@ -71,7 +38,7 @@ public class NumberGuesser {
     }
 
     public void guess() {
-        unknownNum = generateNum();
+        int unknownNum = generateNum();
         Scanner in = new Scanner(System.in);
 
         do {
@@ -89,9 +56,7 @@ public class NumberGuesser {
 
             System.out.println("Guessed numbers: " + guessedNum);
 
-        } while (rounds-- > 0);
-
-
+        } while (rounds-- > 1);
 
         guessedNum = new TreeSet<>();
     }
