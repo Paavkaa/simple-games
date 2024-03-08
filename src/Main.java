@@ -6,7 +6,7 @@ public class Main {
 
         System.out.println("Select game" +
                 "\n1. Rock paper scissors" +
-                "\n2. Number guessing" +
+                "\n2. Number guesser" +
                 "\n3. none" +
                 "\nSelect:");
         int opt = in.nextInt();
@@ -21,7 +21,6 @@ public class Main {
                 NumberGuesser guesser = new NumberGuesser(rounds);
                 guesser.guess();
                 break;
-
             default:
                 System.out.println("Wrong value");
                 break;
